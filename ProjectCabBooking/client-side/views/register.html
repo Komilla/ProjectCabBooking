@@ -1,0 +1,29 @@
+<div class="panel">
+  <div class="table-responsive">
+    <label>Sign-Up</label>
+    <BR>
+    <BR>
+    <select ng-model="UserMyScope.cUserrole">
+      <option value="" selected>Who are you?</option>
+      <option value="passenger">I am a Passenger</option>
+      <option value="driver">I am a Chauffeur</option>
+      <option value="admin">I am the Administrator</option>
+    </select>
+    <BR>
+    <input type="text" placeholder="Choose a User Name" ng-model="UserMyScope.cUsername"/>
+    <BR>
+    <input type="text" placeholder="Enter E-Mail ID" ng-model="UserMyScope.cEmail"/>
+    <BR>
+    <input type="text" placeholder="Enter Mobile Number" ng-model="UserMyScope.cMobile"/>
+    <BR>
+    <input type="password" placeholder="Choose a Password" ng-model="UserMyScope.Password"/>
+    <BR>
+    <input type="password" placeholder="Confirm Password" ng-model="UserMyScope.confirmPassword"/>
+    <BR>
+    <BR>
+    <button type="submit" class="btn btn-warning" ng-click="SaveUser()">I want to Sign Up</button>
+    <BR>
+  </div>
+</div>
+<BR>
+<BR>

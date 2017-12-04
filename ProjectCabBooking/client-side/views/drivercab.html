@@ -1,0 +1,61 @@
+<div class="panel">
+  <label>Driver & Cab Details</label>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
+  <input type="text" placeholder="Your Name" ng-model="DriverMyScope.cName"/>
+  <input type="text" placeholder="E-Mail" ng-model="DriverMyScope.cEmail"/>
+  <input type="text" placeholder="License Number" ng-model="DriverMyScope.cLicense"/>
+  <BR>
+  <input type="text" placeholder="Mobile Number" ng-model="DriverMyScope.cMobile"/>
+  <input type="text" placeholder="Vehicle" ng-model="DriverMyScope.cVehicle"/>
+  <input type="text" placeholder="PAN Card Number" ng-model="DriverMyScope.cPanNo"/>
+  <BR>
+  <input type="text" placeholder="Car Segment" ng-model="DriverMyScope.cSegment"/>
+  <input type="text" placeholder="Car Brand" ng-model="DriverMyScope.cBrand"/>
+  <input type="text" placeholder="Car Plate Number" ng-model="DriverMyScope.cPlate"/>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
+  <button type="submit" class="btn btn-warning" ng-click="SaveDriver()">Submit</button>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+  <button type="submit" class="btn btn-warning" ng-click="UpdateDriver()">Update</button>
+
+
+
+  <div class="table-responsive" id="hideNseek">
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>PAN</th>
+      <th>Segment</th>
+      <th>Brand</th>
+      <th>Plate</th>
+      <th>License</th>
+      <th>Vehicle</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr ng-repeat="k in DriverData">
+      <td>{{k.sName}}</td>
+      <td>{{k.sEmail}}</td>
+      <td>{{k.sMobile}}</td>
+      <td>{{k.sPanNo}}</td>
+      <td>{{k.sSegment}}</td>
+      <td>{{k.sBrand}}</td>
+      <td>{{k.sPlate}}</td>
+      <td>{{k.sLicense}}</td>
+      <td>{{k.sVehicle}}</td>
+      <td><button class="btn btn-warning btn-xs" ng-click="EditDriver(k)">Edit</button></td>
+      <td><button class="btn btn-warning btn-xs" ng-click="RemoveDriver(k)">Delete</button></td>
+    </tr>
+  </table>
+
+  </div>
+</div>
+<BR>
+<BR>

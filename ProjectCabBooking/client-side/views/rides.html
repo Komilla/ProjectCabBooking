@@ -1,0 +1,38 @@
+<div class="panel">
+    <div class="table-responsive">
+
+        <label>My Rides</label>
+        <BR>
+
+        <!--from Ride Now Page-->
+    <table class="table" id="hideNseek">
+        <tr>
+            <!-- <th>Source</th> -->
+            <th>Destination</th>
+            <th>Reserved On</th>
+            <th>Ride On</th>
+            <th>Booking</th>
+            <th>Car</th>
+            <th>Cab Number</th>
+            <th>Amount</th>
+            <!--<th>Edit</th>-->
+            <!--<th>Delete</th>-->
+        </tr>
+        <tr ng-repeat="k in RidenowData">
+            <!-- <td>{{k.sSource}}</td> -->
+            <td>{{k.sDestin}}</td>
+            <td>{{k.sReserveDate}}</td>
+            <td>{{k.sRideDate}}</td>
+            <!-- <td>{{k.sDate | date:'d MMM yy'}}</td> -->
+            <td>{{k.sRideType}}</td>
+            <td>{{k.sCar}}</td>
+            <td>{{k.sDrPlate}}</td>
+            <td>Rs. {{k.sAmount}}</td>
+            <!--<td><button class="btn btn-warning btn-xs" ng-click="EditRidenow(k)">Change Me</button></td>-->
+            <!--<td><button class="btn btn-warning btn-xs" ng-click="RemoveRidenow(k)">Cancel Me</button></td>-->
+        </tr>
+    </table>
+</div>  <!-- div table responsive ends here -->
+</div> <!--  div panel ends here -->
+<BR>
+<BR>

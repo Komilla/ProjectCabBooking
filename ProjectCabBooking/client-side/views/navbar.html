@@ -1,0 +1,32 @@
+<header xmlns="http://www.w3.org/1999/html">
+<div class="navbar-fixed-top">
+  <nav class="nav nav-pills nav-justified">
+    <li ng-show="isLoggedIn"><a href="">Hey {{myUsername}} <i class="fa fa-hand-pointer-o"></i></a></li>
+    <li><a href="#/main"><i class="fa fa-ship"></i> Home</a></li>
+    <li ng-show="isLoggedIn && myUserrole=='admin' "><a href="#/controlfare"><i class="fa fa-subway"></i> Control Fare</a></li>
+    <li ng-show="isLoggedIn && myUserrole=='admin' "><a href="#/drivercab"><i class="fa fa-subway"></i> Driver & Cab Details</a></li>
+    <li ng-show="isLoggedIn && myUserrole=='passenger' "><a href="#/passenger"><i class="fa fa-truck"></i> Book My Cab</a></li>
+    <li ng-hide="isLoggedIn"><a href="#/register"><i class="fa fa-car"></i> Sign-Up</a></li>
+    <li ng-hide="isLoggedIn"><a href="#/login"><i class="fa fa-motorcycle"></i> Sign-In</a></li>
+  </nav>
+  </div>
+</header>
+
+<footer>
+<div>
+   <nav class="nav navbar-fixed-bottom">
+     <div id="mydiv">
+      <img id="mycab" src="../media/cab.jpg">
+      </div>
+    </nav>
+
+ <nav class="nav nav-pills nav-justified navbar-fixed-bottom">
+   <center style="color:black;">
+     <i class="fa fa-quote-left"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Designed & Developed by Komilla &nbsp;&nbsp; <i class="fa fa-gavel"></i> &nbsp;&nbsp; All Rights Reserved ! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-quote-right"></i>
+   </center>
+   <li ng-show="isLoggedIn && myUserrole!='admin' "><a href="#/rides">My Rides</a></li>
+   <li ng-show="isLoggedIn"><a href="#/profile">Change Password</a></li>
+   <li ng-show="isLoggedIn"><a href="#/logout"> Sign-Out</a></li>
+ </nav>
+</div>
+</footer>

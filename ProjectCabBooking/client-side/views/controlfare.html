@@ -1,0 +1,120 @@
+<div class="panel">
+  <div class="table-responsive">
+
+    <label>Hey {{myUserrole}} {{myUsername}}, You are Welcome!</label>
+    <BR>
+    <BR>
+    <select ng-model="FareMyScope.cCar">
+      <option value="" selected>Choose a Car</option>
+      <option ng-repeat="k in DriverData">{{k.sSegment}}</option>
+    </select>
+    <BR>
+    <input type="text" placeholder="Lowest Fare per KM" ng-model="FareMyScope.cRelaxedRates"/>
+    <BR>
+    <input type="text" placeholder="Highest Fare per KM" ng-model="FareMyScope.cBusyRates">
+    <BR>
+      Busy Hours Start :
+       <select id="one" class="smallselect">
+       <option value="" selected>Hours</option>
+       <option value="01">01</option>
+       <option value="02">02</option>
+       <option value="03">03</option>
+       <option value="04">04</option>
+       <option value="05">05</option>
+       <option value="06">06</option>
+       <option value="07">07</option>
+       <option value="08">08</option>
+       <option value="09">09</option>
+       <option value="10">10</option>
+       <option value="11">11</option>
+       <option value="12">12</option>
+       </select>
+       <select id="two" class="smallselect">
+       <option value="" selected>Minutes</option>
+       <option value="00">00</option>
+       <option value="05">05</option>
+       <option value="10">10</option>
+       <option value="15">15</option>
+       <option value="20">20</option>
+       <option value="25">25</option>
+       <option value="30">30</option>
+       <option value="35">35</option>
+       <option value="40">40</option>
+       <option value="45">45</option>
+       <option value="50">50</option>
+       <option value="55">55</option>
+       </select>
+       <select  id="three" class="smallselect">
+         <option value="" selected>AM/PM</option>
+         <option value="AM">AM</option>
+         <option value="PM">PM</option>
+       </select>
+       <BR>
+       <BR>
+         Busy Hours End :
+          <select id="four" class="smallselect">
+          <option value="" selected>Hours</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          </select>
+          <select id="five" class="smallselect">
+          <option value="" selected>Minutes</option>
+          <option value="00">00</option>
+          <option value="05">05</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+          </select>
+          <select  id="six" class="smallselect">
+            <option value="" selected>AM/PM</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+       <BR>
+      <BR>
+    <button type="submit" class="btn btn-warning" ng-click="SaveFare()">Submit</button>
+    <button class="btn btn-warning" ng-click="UpdateFare()">Update</button>
+    <BR>
+    <BR>
+
+  <table class="table" id="hideNseek">
+    <tr>
+      <th>Car</th>
+      <th>Low Fare per KM</th>
+      <th>High Fare per KM</th>
+      <th>Busy Hour Start</th>
+      <th>Busy Hour End</th>
+      <th>Edit</th>
+      <th>Update</th>
+    </tr>
+    <tr ng-repeat="k in FareData">
+      <td>{{k.sCar}}</td>
+      <td>{{k.sRelaxedRates}}</td>
+      <td>{{k.sBusyRates}}</td>
+      <td>{{k.sBusyStart}}</td>
+      <td>{{k.sBusyEnd}}</td>
+      <td><button class="btn btn-warning btn-xs" ng-click="EditFare(k)">Edit</button></td>
+      <td><button class="btn btn-warning btn-xs" ng-click="RemoveFare(k)">Remove</button></td>
+    </tr>
+  </table>
+  </div>
+</div>
+<BR>
+<BR>

@@ -1,0 +1,78 @@
+<div class="container col-md-12">
+  <div class="row">
+    <div class="panel">
+			<div class="table-responsive">
+				  <BR><BR>
+            <div class="col-md-3">
+              <BR>
+            	<select id="AbYaTab" name="from1" ng-model="myRideScope.AbYaTab"  required>
+            	<option value="" disabled selected>Select You ride time</option>
+            	<option value="Ab">Now</option>
+            	<option value="Tab">Later</option>
+            	</select>
+            	<BR>
+            	<div ng-show="myRideScope.AbYaTab==='Tab'">
+	<!-- Clock Picker -->
+	<script type="text/javascript">
+	$('.clockpicker').clockpicker();
+	</script>
+	<span class="input-group clockpicker" style="display:inline;">
+	<input type="text"  id="time" placeholder="Select Time">
+	</span>
+
+  <!-- Date Picker -->
+	<datepicker date-format="d/MM/yy" date-min-limit="{{myDateVar}}" required>
+	<input id="demo" placeholder="Select Date" type="text">
+	</datepicker>
+
+	</div>
+
+	<BR>
+
+<!-- <label for="txtFrom"></label> -->
+<input type="text" name="from" placeholder="Where to Pick You?" id="cSourceID" ng-model="myRideScope.cSource" required>
+<p ng-show="myform.from.$invalid && !myform.from.$pristine">Where do you come from???</p>
+
+<BR>
+
+<!-- <label for="cDestinID"></label> -->
+<input type="text" placeholder="Where to Drop You?" id="cDestinID" name="to" ng-model="myRideScope.cDestin" required>
+<p ng-show="myform.to.$invalid && !myform.to.$pristine">We can't Help you if you don't know where you are headed to!!!</p>
+
+<BR>
+
+<!-- <label for="myCar"></label> -->
+<select  id="myCar" ng-model="myRideScope.bookVehicleType" name="vt" required>
+<option value="" disabled selected>Choose a Car</option>
+<option ng-repeat="d in cCar1" value={{d.sCar}}>{{d.sCar}}</option>
+</select>
+<BR><BR><BR>
+
+<button type="button" name="button" id="routeClick" class="btn btn-warning" ng-click="reserveRide()" ng-disabled="myform.$invalid">Reserve Your Ride</button>
+
+</form>
+</div> <!-- div col ends here -->
+
+<div class="col-md-3">
+<BR><BR>
+<div id="hideNseek">
+Distance will be <label id='myRouteDistance'></label> kms <BR>
+Duration will be <label id='myRouteDuration'></label> minutes <BR><BR>
+<button type="submit" class="btn btn-warning" ng-click="SaveRidenow()">Confirm Booking</button>
+</div>
+<div id="hideNseekagain">
+  Driver Name :  {{myRideScope.cDrName}} <br><br>
+  Driver MobileNo : {{myRideScope.cDrMobile}} <br><br>
+  Vehicle Number :{{myRideScope.cDrPlate}} <br><br>
+  Cab type : {{myRideScope.vehicletype}}<br><br>
+</div>
+</div> <!-- div col ends here -->
+<div class="col-md-6">
+<div id="map"></div>
+</div> <!-- div col ends here -->
+</div>  <!-- div responsive ends here -->
+</div>  <!--  div panel ends here -->
+</div> <!--  div row ends here -->
+</div> <!--  div container ends here -->
+<BR>
+<BR>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="buggyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cab Booking</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/thisismystyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- for sockets only -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-cookies.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+
+    <!-- for maps only -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi8aNiMo3HGPsW26bMPpzv-LNc0lIM64E&libraries=places"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-maps/2.4.1/angular-google-maps.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-maps/1.1.4/angular-google-maps.min.js"></script>
+
+    <!--<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>-->
+    <!--<link rel="stylesheet" href="./css/bootstrap-3.3.7.min.css">-->
+    <!--<script type="text/javascript" src="./js/bootstrap-3.3.7.min.js"></script>-->
+    <!--<script src="./js/angular.min.js"></script>-->
+    <!--<script src="./js/angular-route.min.js"></script>-->
+    <!--<script src="./js/angular-cookies.min.js"></script>-->
+    <!--<script src="./js/ngStorage.min.js"></script>-->
+
+    <script src="./app.js"></script>
+    <script src="./directive/navbar.js"></script>
+    <script src="./controller/passengerController.js"></script>
+    <script src="./controller/navbarController.js"></script>
+    <script src="./controller/mainController.js"></script>
+    <script src="./controller/profileController.js"></script>
+    <script src="./controller/ridesController.js"></script>
+    <script src="./controller/controlfareController.js"></script>
+    <script src="./controller/loginController.js"></script>
+    <script src="./controller/logoutController.js"></script>
+    <script src="./controller/registerController.js"></script>
+    <script src="./controller/drivercabController.js"></script>
+    <script src="./service/Authentication.js"></script>
+
+    <!-- for date picker only -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-datepicker/2.1.23/angular-datepicker.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-datepicker/2.1.23/angular-datepicker.css">
+
+    <!-- for clock picker only -->
+    <script src="./js/jquery-clockpicker.js"></script>
+    <link rel="stylesheet" href="./css/jquery-clockpicker.css">
+
+
+
+</head>
+
+<body>
+<header>
+</header>
+
+<navbar></navbar>
+
+<div ng-view></div>
+
+<footer>
+</footer>
+
+</body>
+</html>

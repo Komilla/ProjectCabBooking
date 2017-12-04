@@ -1,0 +1,29 @@
+<div class="container col-md-12">
+  <div class="row">
+    <div class="panel">
+      <div class="table-responsive">
+  <BR>
+          <div class="col-md-4">
+            <H1 ng-if="!d"> <BR><BR> Welcome <BR><BR> to the <BR><BR> Cab App</H1>
+            <label ng-if="d!=null">
+              Passenger Name :  <BR> {{d.sPaName}} <BR> <BR>
+              Passenger MobileNo :  <BR> {{d.sPaMobile}} <BR> <BR>
+              <!-- Pickup Location :  <BR> {{d.sSource}} <BR> <BR> -->
+              Pickup Date and Time :  <BR> {{d.sRideDate}} <BR> <BR>
+              Destination :  <BR> {{d.sDestin}} <BR> <BR>
+              <button type="button" name="button" class="btn btn-warning" ng-click="endTrip()">Trip Completed</button>
+            </label>
+          </div> <!-- div col ends here -->
+          <br>
+          <br>
+          <div class="col-md-8">
+            <div id="map" ng-init="myMap()"></div>
+            <BR><BR>
+        </div> <!-- div col ends here -->
+  <BR><BR>
+  </div>  <!-- div responsive ends here -->
+  </div>  <!--  div panel ends here -->
+</div> <!--  div row ends here -->
+</div> <!--  div container ends here -->
+<BR>
+<BR>
